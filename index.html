@@ -123,7 +123,6 @@
         text-decoration: none;
       }
 
-      /* 👉 FIX KONTRAS LOGO HEADER: Efek kapsul kaca tipis transparan (Frosted Glass) tanpa merusak ketajaman asli logo */
       .logo-img {
         height: 52px; 
         width: auto;
@@ -419,18 +418,20 @@
         font-weight: 600;
       }
 
+      /* 👉 STYLE GRID UNTUK 5 PILAR CARD DI ABOUT US */
       .premium-feature-showcase {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 30px;
-        margin-top: 45px;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        margin: 45px 0;
       }
 
       .feat-card {
         background-color: var(--royal-navy);
         border: 1px solid rgba(212, 175, 55, 0.08);
-        padding: 35px 30px;
+        padding: 30px 20px;
         border-radius: 0;
+        text-align: center;
         transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         position: relative;
       }
@@ -457,16 +458,17 @@
       }
 
       .feat-card i {
-        font-size: 28px;
+        font-size: 26px;
         color: var(--premium-gold);
-        margin-bottom: 20px;
+        margin-bottom: 15px;
         display: block;
       }
 
       .feat-card h4 {
         font-family: 'Cinzel', serif;
-        font-size: 15px;
+        font-size: 13px;
         letter-spacing: 1px;
+        line-height: 1.4;
       }
 
       /* --- VISION & MISSION --- */
@@ -941,7 +943,6 @@
         text-decoration: none;
       }
 
-      /* 👉 FIX KONTRAS LOGO FOOTER: Efek glass-badge senada di area bawah */
       .footer-logo-img {
         height: 40px;
         width: auto;
@@ -966,7 +967,6 @@
         z-index: 0;
       }
 
-      /* 👉 FIX WATERMARK DEKORATIF HERO */
       .hero-logo-bg {
         position: absolute;
         right: -100px;
@@ -1008,7 +1008,6 @@
         100% { transform: translateY(-100px); opacity: 0; }
       }
 
-      /* 👉 FIX SECTIONS DECORATIVE WATERMARK */
       .logo-watermark {
         position: absolute;
         width: 450px;
@@ -1038,12 +1037,11 @@
          ================================================== */
       
       @media (max-width: 1200px) {
-        .adv-showcase-grid {
-          grid-template-columns: repeat(3, 1fr);
-          gap: 20px;
-        }
+        .premium-feature-showcase,
+        .adv-showcase-grid,
         .value-luxury-row {
           grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
         }
       }
 
@@ -1078,7 +1076,6 @@
           padding: 12px 24px;
         }
 
-        /* 👉 LOGO RESPONSIVE HP */
         .logo-img {
           height: 44px;
           padding: 5px 12px;
@@ -1182,18 +1179,15 @@
           left: -30px;
         }
 
-        .adv-showcase-grid {
+        .premium-feature-showcase,
+        .adv-showcase-grid,
+        .value-luxury-row {
           grid-template-columns: repeat(2, 1fr);
           gap: 16px;
         }
 
         .ind-premium-grid {
           grid-template-columns: 1fr;
-          gap: 16px;
-        }
-
-        .value-luxury-row {
-          grid-template-columns: repeat(2, 1fr);
           gap: 16px;
         }
         
@@ -1215,11 +1209,9 @@
       }
 
       @media (max-width: 580px) {
+        .premium-feature-showcase,
         .adv-showcase-grid,
-        .value-luxury-row {
-          grid-template-columns: 1fr;
-        }
-        
+        .value-luxury-row,
         .services-masonry {
           grid-template-columns: 1fr;
         }
@@ -1296,19 +1288,35 @@
           <h2 class="sec-title">About Us</h2>
           <div class="decor-bar" style="margin: 20px 0 45px 0;"></div>
           <p>
-            <strong>PT Mubarokindo</strong> hadir sebagai perusahaan profesional yang bergerak di bidang Technical Consultant, Financial Consultant, Construction, Engineering, dan Inspection Services.
+            <strong>PT Mubarokindo</strong> hadir sebagai perusahaan profesional yang bergerak di bidang:
           </p>
-          <p> Dengan komitmen tinggi terhadap kualitas, integritas, dan kepuasan pelanggan, kami memberikan solusi menyeluruh untuk mendukung kebutuhan industri, konstruksi, energi, manufaktur, dan infrastruktur modern. Didukung oleh tenaga profesional berpengalaman dan sistem kerja yang terukur, kami berupaya menjadi mitra strategis terpercaya dalam setiap proyek yang kami tangani. </p>
+          
           <div class="premium-feature-showcase">
             <div class="feat-card" data-aos="fade-up" data-aos-delay="100">
               <i class="fa-solid fa-user-gear"></i>
-              <h4>Technical & Financial Advisory</h4>
+              <h4>Technical Consultant</h4>
             </div>
             <div class="feat-card" data-aos="fade-up" data-aos-delay="200">
-              <i class="fa-solid fa-screwdriver-wrench"></i>
-              <h4>EPC & Inspection Systems</h4>
+              <i class="fa-solid fa-chart-pie"></i>
+              <h4>Financial Consultant</h4>
+            </div>
+            <div class="feat-card" data-aos="fade-up" data-aos-delay="300">
+              <i class="fa-solid fa-helmet-safety"></i>
+              <h4>Construction</h4>
+            </div>
+            <div class="feat-card" data-aos="fade-up" data-aos-delay="400">
+              <i class="fa-solid fa-compass-drafting"></i>
+              <h4>Engineering</h4>
+            </div>
+            <div class="feat-card" data-aos="fade-up" data-aos-delay="500">
+              <i class="fa-solid fa-magnifying-glass-shield"></i>
+              <h4>Inspection Services</h4>
             </div>
           </div>
+
+          <p>
+            Dengan komitmen tinggi terhadap kualitas, integritas, dan kepuasan pelanggan, kami memberikan solusi menyeluruh untuk mendukung kebutuhan industri, konstruksi, energi, manufaktur, dan infrastruktur modern. Didukung oleh tenaga profesional berpengalaman dan sistem kerja yang terukur, kami berupaya menjadi mitra strategis terpercaya dalam setiap proyek yang kami tangani.
+          </p>
         </div>
       </div>
     </section>
@@ -1328,7 +1336,7 @@
         <div class="mission-accordion" data-aos="fade-left">
           <div class="mission-node">
             <h3>Effective Solutions</h3>
-            <p>Memberikan solusi profesional yang efektif and bernilai tinggi kepada client.</p>
+            <p>Memberikan solusi profesional yang efektif dan bernilai tinggi kepada client.</p>
           </div>
           <div class="mission-node">
             <h3>Quality & Safety Management</h3>
@@ -1586,13 +1594,11 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-      // Init AOS dengan Durasi Smooth
       AOS.init({
         duration: 1200,
         once: true,
         offset: 120
       });
-      // Preloader Control
       window.addEventListener('load', () => {
         const preloader = document.getElementById('preloader');
         preloader.style.opacity = '0';
@@ -1600,7 +1606,6 @@
           preloader.style.display = 'none';
         }, 600);
       });
-      // Header Control Scroll
       window.addEventListener('scroll', () => {
         const header = document.querySelector('header');
         if (window.scrollY > 60) {
@@ -1609,7 +1614,6 @@
           header.classList.remove('scrolled');
         }
       });
-      // Mobile Menu Toggle
       function toggleMenu() {
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
