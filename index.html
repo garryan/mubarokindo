@@ -404,6 +404,7 @@
         z-index: 5;
       }
 
+      /* 👉 FIX ALIGNMENT: Justify teks panjang paragraf About Us */
       .about-text-premium p {
         font-size: 16px;
         line-height: 1.8;
@@ -411,6 +412,7 @@
         margin-bottom: 30px;
         font-weight: 300;
         max-width: 950px;
+        text-align: justify;
       }
 
       .about-text-premium p strong {
@@ -418,7 +420,6 @@
         font-weight: 600;
       }
 
-      /* 👉 STYLE GRID UNTUK 5 PILAR CARD DI ABOUT US */
       .premium-feature-showcase {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -484,6 +485,7 @@
         z-index: 5;
       }
 
+      /* 👉 FIX ALIGNMENT: Justify deskripsi Vision */
       .vision-premium-card {
         background: linear-gradient(135deg, rgba(6, 16, 38, 0.7) 0%, rgba(6, 16, 38, 0.95) 100%);
         border: 1px solid rgba(212, 175, 55, 0.15);
@@ -492,6 +494,14 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+      }
+
+      .vision-premium-card p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: var(--text-silver);
+        font-weight: 300;
+        text-align: justify;
       }
 
       .vision-premium-card::before {
@@ -511,6 +521,7 @@
         gap: 20px;
       }
 
+      /* 👉 FIX ALIGNMENT: Justify point-point Mission */
       .mission-node {
         background-color: var(--luxury-navy);
         border-left: 3px solid rgba(212, 175, 55, 0.2);
@@ -537,6 +548,7 @@
         color: var(--text-silver);
         line-height: 1.6;
         font-weight: 300;
+        text-align: justify;
       }
 
       /* --- SERVICES (LAYANAN) --- */
@@ -552,6 +564,7 @@
         z-index: 5;
       }
 
+      /* 👉 FIX ALIGNMENT: Justify teks pengantar di kotak Layanan */
       .service-box-luxury {
         background-color: var(--royal-navy);
         border: 1px solid rgba(255, 255, 255, 0.02);
@@ -579,6 +592,7 @@
         line-height: 1.6;
         margin-bottom: 25px;
         font-weight: 300;
+        text-align: justify;
       }
 
       .sub-services-tags {
@@ -589,18 +603,21 @@
         gap: 12px;
       }
 
+      /* 👉 FIX ALIGNMENT: Justify sub-point tag list layanan */
       .sub-services-tags span {
         font-size: 13px;
         color: var(--pure-white);
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         gap: 12px;
-        line-height: 1.4;
+        line-height: 1.5;
+        text-align: justify;
       }
 
       .sub-services-tags span i {
         font-size: 8px;
         color: var(--premium-gold);
+        margin-top: 6px;
         flex-shrink: 0;
       }
 
@@ -617,6 +634,7 @@
         z-index: 5;
       }
 
+      /* 👉 FIX ALIGNMENT: Justify deskripsi Keunggulan */
       .adv-premium-node {
         background-color: var(--luxury-navy);
         border: 1px solid rgba(255, 255, 255, 0.01);
@@ -661,8 +679,9 @@
       .adv-premium-node p {
         font-size: 13px;
         color: var(--text-silver);
-        line-height: 1.5;
+        line-height: 1.6;
         font-weight: 300;
+        text-align: justify;
       }
 
       /* --- INDUSTRIES WE SERVE --- */
@@ -759,6 +778,7 @@
         gap: 20px;
       }
 
+      /* 👉 FIX ALIGNMENT: Justify teks deskripsi Company Values */
       .val-luxury-box {
         border-top: 2px solid rgba(212, 175, 55, 0.15);
         padding: 25px 15px;
@@ -783,8 +803,9 @@
       .val-luxury-box p {
         font-size: 12px;
         color: var(--text-silver);
-        line-height: 1.5;
+        line-height: 1.6;
         font-weight: 300;
+        text-align: justify;
       }
 
       /* --- CONTACT & INPUT FORM --- */
@@ -1331,7 +1352,7 @@
         <div class="vision-premium-card" data-aos="fade-right">
           <i class="fa-solid fa-eye" style="font-size: 30px; color: var(--premium-gold); margin-bottom: 25px;"></i>
           <h3 style="font-family: 'Cinzel', serif; font-size: 22px; color: var(--pure-white); margin-bottom: 20px; letter-spacing: 1px;">Vision</h3>
-          <p style="font-size: 16px; line-height: 1.8; color: var(--text-silver); font-weight: 300;"> Menjadi perusahaan konsultansi, engineering, konstruksi, dan inspeksi terpercaya berskala nasional maupun internasional yang mengedepankan kualitas, profesionalisme, dan integritas. </p>
+          <p> Menjadi perusahaan konsultansi, engineering, konstruksi, dan inspeksi terpercaya berskala nasional maupun internasional yang mengedepankan kualitas, profesionalisme, dan integritas. </p>
         </div>
         <div class="mission-accordion" data-aos="fade-left">
           <div class="mission-node">
