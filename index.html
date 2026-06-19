@@ -123,18 +123,23 @@
         text-decoration: none;
       }
 
-      /* 👉 SOLUSI KONTRAS LOGO: Menggunakan filter drop-shadow emas untuk memisahkan warna navy logo dengan navy background */
+      /* 👉 FIX KONTRAS LOGO HEADER: Efek kapsul kaca tipis transparan (Frosted Glass) tanpa merusak ketajaman asli logo */
       .logo-img {
         height: 52px; 
         width: auto;
         object-fit: contain;
         transition: all 0.4s ease;
-        filter: drop-shadow(0px 0px 8px rgba(212, 175, 55, 0.35)) 
-                drop-shadow(0px 0px 2px rgba(253, 229, 171, 0.2));
+        background: rgba(255, 255, 255, 0.11);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 6px 16px;
+        border-radius: 4px;
+        border: 1px solid rgba(212, 175, 55, 0.25);
       }
 
       header.scrolled .logo-img {
         height: 44px; 
+        padding: 5px 12px;
       }
 
       .nav-links {
@@ -936,12 +941,16 @@
         text-decoration: none;
       }
 
-      /* 👉 KONTRAS LOGO FOOTER FIX */
+      /* 👉 FIX KONTRAS LOGO FOOTER: Efek glass-badge senada di area bawah */
       .footer-logo-img {
-        height: 38px;
+        height: 40px;
         width: auto;
         object-fit: contain;
-        filter: drop-shadow(0px 0px 6px rgba(212, 175, 55, 0.3));
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(5px);
+        padding: 5px 12px;
+        border-radius: 4px;
+        border: 1px solid rgba(212, 175, 55, 0.18);
       }
 
       /* --- PREMIUM DECORATION UPGRADE --- */
@@ -957,7 +966,7 @@
         z-index: 0;
       }
 
-      /* 👉 KONTRAS BACKGROUND WATERMARK LOGO FIX */
+      /* 👉 FIX WATERMARK DEKORATIF HERO */
       .hero-logo-bg {
         position: absolute;
         right: -100px;
@@ -969,10 +978,10 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        opacity: .04;
+        opacity: .05;
         pointer-events: none;
         z-index: 1;
-        filter: grayscale(100%) brightness(1.5);
+        filter: grayscale(100%) brightness(1.6);
       }
 
       .hero-particles {
@@ -999,7 +1008,7 @@
         100% { transform: translateY(-100px); opacity: 0; }
       }
 
-      /* 👉 KONTRAS DECORATIVE WATERMARK FIX */
+      /* 👉 FIX SECTIONS DECORATIVE WATERMARK */
       .logo-watermark {
         position: absolute;
         width: 450px;
@@ -1008,10 +1017,10 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: contain;
-        opacity: .015;
+        opacity: .018;
         pointer-events: none;
         z-index: 1;
-        filter: grayscale(100%) brightness(1.5);
+        filter: grayscale(100%) brightness(1.6);
       }
 
       .gold-glow {
@@ -1069,12 +1078,14 @@
           padding: 12px 24px;
         }
 
-        /* 👉 ADJUSTMENT LOGO UNTUK HP */
+        /* 👉 LOGO RESPONSIVE HP */
         .logo-img {
           height: 44px;
+          padding: 5px 12px;
         }
         header.scrolled .logo-img {
           height: 38px;
+          padding: 4px 10px;
         }
 
         .hamburger {
