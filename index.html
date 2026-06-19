@@ -101,7 +101,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        padding: 20px 8%;
+        padding: 25px 8%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -117,22 +117,24 @@
         backdrop-filter: blur(12px);
       }
 
-      /* 👉 BRAND LOGO FIX (Menggantikan Tulisan dengan Gambar) */
       .logo {
         display: flex;
         align-items: center;
         text-decoration: none;
       }
 
+      /* 👉 SOLUSI KONTRAS LOGO: Menggunakan filter drop-shadow emas untuk memisahkan warna navy logo dengan navy background */
       .logo-img {
-        height: 55px; /* Ukuran ideal di desktop */
+        height: 52px; 
         width: auto;
         object-fit: contain;
-        transition: height 0.4s ease;
+        transition: all 0.4s ease;
+        filter: drop-shadow(0px 0px 8px rgba(212, 175, 55, 0.35)) 
+                drop-shadow(0px 0px 2px rgba(253, 229, 171, 0.2));
       }
 
       header.scrolled .logo-img {
-        height: 45px; /* Sedikit mengecil saat di-scroll agar rapi */
+        height: 44px; 
       }
 
       .nav-links {
@@ -929,18 +931,17 @@
       }
 
       .footer-logo {
-        font-family: 'Cinzel', serif;
-        color: var(--pure-white);
-        letter-spacing: 3px;
-        font-weight: 700;
         display: flex;
         align-items: center;
+        text-decoration: none;
       }
 
-      .footer-logo .footer-logo-img {
-        height: 40px;
+      /* 👉 KONTRAS LOGO FOOTER FIX */
+      .footer-logo-img {
+        height: 38px;
         width: auto;
         object-fit: contain;
+        filter: drop-shadow(0px 0px 6px rgba(212, 175, 55, 0.3));
       }
 
       /* --- PREMIUM DECORATION UPGRADE --- */
@@ -956,7 +957,7 @@
         z-index: 0;
       }
 
-      /* 👉 WATERMARK FIX USING DIRECT IMAGE PATH */
+      /* 👉 KONTRAS BACKGROUND WATERMARK LOGO FIX */
       .hero-logo-bg {
         position: absolute;
         right: -100px;
@@ -971,7 +972,7 @@
         opacity: .04;
         pointer-events: none;
         z-index: 1;
-        filter: grayscale(100%);
+        filter: grayscale(100%) brightness(1.5);
       }
 
       .hero-particles {
@@ -998,6 +999,7 @@
         100% { transform: translateY(-100px); opacity: 0; }
       }
 
+      /* 👉 KONTRAS DECORATIVE WATERMARK FIX */
       .logo-watermark {
         position: absolute;
         width: 450px;
@@ -1009,7 +1011,7 @@
         opacity: .015;
         pointer-events: none;
         z-index: 1;
-        filter: grayscale(100%);
+        filter: grayscale(100%) brightness(1.5);
       }
 
       .gold-glow {
@@ -1067,12 +1069,12 @@
           padding: 12px 24px;
         }
 
-        /* 👉 LOGO ADJUSTMENT FOR PHONE SCREEN */
+        /* 👉 ADJUSTMENT LOGO UNTUK HP */
         .logo-img {
-          height: 45px;
+          height: 44px;
         }
         header.scrolled .logo-img {
-          height: 40px;
+          height: 38px;
         }
 
         .hamburger {
